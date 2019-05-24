@@ -39,4 +39,9 @@ public class DoctorService {
     public long countDoctors(){
         return doctorRepository.count();
     }
+
+    public String deleteByFirstName(String firstName) {
+        doctorRepository.deleteByFirstName(firstName);
+        return "delete succeded";
+    }
 }

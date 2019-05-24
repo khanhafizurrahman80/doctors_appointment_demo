@@ -6,10 +6,12 @@ import com.example.riad.doctorsappointment.data.services.DoctorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.swing.plaf.PanelUI;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Controller
@@ -48,5 +50,13 @@ public class DoctorController {
     @ResponseBody
     public long countAllDoctorsDetails() {
         return doctorDetailsService.countDoctorDetails();
+    }
+
+    @RequestMapping("/delete-by-id/{firstName}")
+    @ResponseBody
+    @Transactional
+    public String deleteByFirstName(@PathVariable String firstName){
+        doctorService.deleteByFirstName(firstName);
+        return "is deleted!!!";
     }
 }
