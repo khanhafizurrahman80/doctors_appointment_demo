@@ -1,4 +1,4 @@
-package com.example.riad.doc_appointment.configs;
+package com.example.riad.doc_appointment.data.configs;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;

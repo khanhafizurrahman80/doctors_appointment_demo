@@ -1,9 +1,10 @@
-package com.example.riad.doc_appointment.domains;
+package com.example.riad.doc_appointment.data.domains;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -19,15 +20,16 @@ public class Doctor {
     private String phoneNumber;
     private String category;
 
-    @OneToMany
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     @JoinColumn
-    private DoctorDetails doctorDetails;
+    private Set<DoctorDetails> doctorDetails;
 
-    public Doctor(String firstName, String lastName, String emailAddress, String phoneNumber, String category) {
+    public Doctor(String firstName, String lastName, String emailAddress, String phoneNumber, String category, Set<DoctorDetails> doctorDetails) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.category = category;
+        this.doctorDetails = doctorDetails;
     }
 }
