@@ -14,4 +14,8 @@ public class DoctorDetailsService {
         this.doctorDetailsRepository = doctorDetailsRepository;
     }
 
+    public long countDoctorDetails(){
+        return doctorDetailsRepository.count();
+    }
+
 }

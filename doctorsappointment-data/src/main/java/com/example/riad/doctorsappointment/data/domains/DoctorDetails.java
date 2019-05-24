@@ -1,5 +1,6 @@
 package com.example.riad.doctorsappointment.data.domains;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class DoctorDetails {
     private String time;
     private String contactAddress;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn
     private Doctor doctor;

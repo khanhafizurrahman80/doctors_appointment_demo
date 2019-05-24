@@ -1,2 +1,4 @@
 com/example/riad/doctorsappointment/web/bootstrap/DoctorAppointmentBootstrap.class
 com/example/riad/doctorsappointment/web/DoctorsappointmentApplication.class
+com/example/riad/doctorsappointment/web/controllers/MainController.class
+com/example/riad/doctorsappointment/web/controllers/DoctorController.class

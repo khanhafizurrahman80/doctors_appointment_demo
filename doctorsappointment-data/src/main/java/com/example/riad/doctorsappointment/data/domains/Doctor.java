@@ -1,6 +1,9 @@
 package com.example.riad.doctorsappointment.data.domains;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +12,8 @@ import java.util.Set;
 
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class Doctor {
@@ -23,6 +28,7 @@ public class Doctor {
     private String phoneNumber;
     private String category;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private Set<DoctorDetails> doctorDetails = new HashSet<>();
 
