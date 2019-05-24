@@ -1,0 +1,7 @@
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsService.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/DoctorDetailsRepository.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Doctor.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/DoctorRepository.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorService.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/DoctorDetails.java
+/Users/khanhafizurrahman/Desktop/Developer/Spring_learning/doctorsappointment/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/DataSourceConfig.java

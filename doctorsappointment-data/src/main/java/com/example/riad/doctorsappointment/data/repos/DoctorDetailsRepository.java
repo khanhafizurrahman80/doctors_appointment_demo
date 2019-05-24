@@ -1,6 +1,6 @@
-package com.example.riad.doc_appointment.data.repos;
+package com.example.riad.doctorsappointment.data.repos;
 
-import com.example.riad.doc_appointment.data.domains.DoctorDetails;
+import com.example.riad.doctorsappointment.data.domains.DoctorDetails;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

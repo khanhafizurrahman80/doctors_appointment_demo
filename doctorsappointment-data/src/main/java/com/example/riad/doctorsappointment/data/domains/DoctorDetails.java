@@ -1,17 +1,16 @@
-package com.example.riad.doc_appointment.data.domains;
+package com.example.riad.doctorsappointment.data.domains;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-@EqualsAndHashCode(exclude = {"Doctor"})
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@EqualsAndHashCode(exclude = {"Doctor"})
+
 public class DoctorDetails {
 
     @Id
@@ -26,8 +25,6 @@ public class DoctorDetails {
     @JoinColumn
     private Doctor doctor;
 
-    public DoctorDetails() {
-    }
 
     public DoctorDetails(String day, String time, String contactAddress) {
         this.day = day;
@@ -35,10 +32,4 @@ public class DoctorDetails {
         this.contactAddress = contactAddress;
     }
 
-    public DoctorDetails(String day, String time, String contactAddress, Doctor doctor) {
-        this.day = day;
-        this.time = time;
-        this.contactAddress = contactAddress;
-        this.doctor = doctor;
-    }
 }

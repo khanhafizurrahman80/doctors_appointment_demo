@@ -1,4 +1,4 @@
-package com.example.riad.doctorsappointment;
+package com.example.riad.doctorsappointment.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

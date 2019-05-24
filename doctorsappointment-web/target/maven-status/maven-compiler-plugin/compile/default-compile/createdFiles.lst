@@ -1,1 +1,2 @@
-com/example/riad/doctorsappointment/DoctorsappointmentApplication.class
+com/example/riad/doctorsappointment/web/bootstrap/DoctorAppointmentBootstrap.class
+com/example/riad/doctorsappointment/web/DoctorsappointmentApplication.class

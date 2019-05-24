@@ -1,22 +1,21 @@
-package com.example.riad.doc_appointment.data.domains;
+package com.example.riad.doctorsappointment.data.domains;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
+@Entity
 @Getter
 @Setter
-@Entity
 public class Doctor {
-
+    // remember the id annotation from persistence not from the spring annotation
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String firstName;
     private String lastName;
