@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ffe90e6-4b75-42fe-936d-c4549e8ae833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/bootstrap/DoctorAppointmentBootstrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/data/configs/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/data/domains/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/data/domains/DoctorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/DoctorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/data/repos/DoctorDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/DoctorDetailsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/data/repos/DoctorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/DoctorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/doctorsappointmentweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/doctorsappointmentweb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/DoctorsappointmentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/DoctorsappointmentApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/test/java/com/example/riad/doctorsappointment/DoctorsappointmentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/src/test/java/com/example/riad/doctorsappointment/web/DoctorsappointmentApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/docker-doctor-appointment.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/docker-doctor-appointment.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/TEST-com.example.riad.doctorsappointment.DoctorsappointmentApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/com.example.riad.doctorsappointment.DoctorsappointmentApplicationTests.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,12 +21,14 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Doctor.java">
+        <entry file="file://$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +70,9 @@
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorService.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsService.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/DataSourceConfig.java" />
-        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/DoctorDetails.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Doctor.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/DoctorDetails.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/MainController.java" />
       </list>
     </option>
   </component>
@@ -165,33 +149,6 @@
             <path>
               <item name="doctorsappointment" type="b2602c69:ProjectViewProjectNode" />
               <item name="doctorsappointment" type="462c0819:PsiDirectoryNode" />
-              <item name="doctorsappointment-data" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doctorsappointment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doctorsappointment" type="462c0819:PsiDirectoryNode" />
-              <item name="doctorsappointment-data" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doctorsappointment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doctorsappointment" type="462c0819:PsiDirectoryNode" />
-              <item name="doctorsappointment-data" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doctorsappointment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doctorsappointment" type="462c0819:PsiDirectoryNode" />
               <item name="doctorsappointment-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -222,7 +179,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DoctorsappointmentApplication">
+  <component name="RunManager" selected="Spring Boot.DoctorsappointmentApplication (1)">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -329,18 +286,17 @@
       <updated>1558690255180</updated>
       <workItem from="1558690259242" duration="4695000" />
       <workItem from="1558698346268" duration="9908000" />
-      <workItem from="1558712450693" duration="1520000" />
+      <workItem from="1558712450693" duration="2940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16123000" />
+    <option name="totallyTimeSpent" value="17543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21567044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37802908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -499,17 +455,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/DoctorDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="197">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="131">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
           </folding>
         </state>
       </provider>
