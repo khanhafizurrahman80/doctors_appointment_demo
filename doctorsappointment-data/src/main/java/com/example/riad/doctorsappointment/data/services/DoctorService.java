@@ -1,6 +1,7 @@
 package com.example.riad.doctorsappointment.data.services;
 
 import com.example.riad.doctorsappointment.data.domains.Doctor;
+import com.example.riad.doctorsappointment.data.domains.DoctorShortDescription;
 import com.example.riad.doctorsappointment.data.repos.DoctorRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,4 +45,15 @@ public class DoctorService {
     public String getFirstName() {
         return "Riad";
     }
+
+    public List<DoctorShortDescription> getFullName() {
+        List<Doctor> doctorList = getAllDoctors();
+        List<DoctorShortDescription> doctorShortDescriptions = new ArrayList<>();
+        doctorList.forEach(doctor -> {
+           doctorShortDescriptions.add(new DoctorShortDescription(doctor.getFirstName() + " " +doctor.getLastName(), doctor.getCategory()));
+        });
+        return doctorShortDescriptions;
+    }
+
+
 }

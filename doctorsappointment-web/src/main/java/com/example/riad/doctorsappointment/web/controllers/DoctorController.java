@@ -1,16 +1,18 @@
 package com.example.riad.doctorsappointment.web.controllers;
 
 import com.example.riad.doctorsappointment.data.domains.Doctor;
+import com.example.riad.doctorsappointment.data.domains.DoctorShortDescription;
 import com.example.riad.doctorsappointment.data.services.DoctorDetailsService;
 import com.example.riad.doctorsappointment.data.services.DoctorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.swing.plaf.PanelUI;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -60,9 +62,16 @@ public class DoctorController {
         return "is deleted!!!";
     }
 
-    @RequestMapping("/get-full-name")
+    @RequestMapping("/get-first-name")
     @ResponseBody
     public String getFirstName() {
         return doctorService.getFirstName();
+    }
+
+    @RequestMapping("/get-full-name")
+    @ResponseBody
+    public ResponseEntity<List<DoctorShortDescription>> getFullName() {
+        List<DoctorShortDescription> doctorShortDescriptions = doctorService.getFullName();
+        return new ResponseEntity<List<DoctorShortDescription>>(doctorShortDescriptions, HttpStatus.OK);
     }
 }
