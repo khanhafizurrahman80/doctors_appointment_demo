@@ -22,11 +22,7 @@ public class DoctorService {
     public List<Doctor> getAllDoctors(){
         List<Doctor> doctors = new ArrayList<>();
         Iterable<Doctor> doctorlist = doctorRepository.findAll();
-        int count = 0;
-        for (Doctor d: doctorlist){
-            count +=1;
-        }
-        log.debug("total count " + count);
+
         doctorlist .forEach(doctors::add);
 
         return doctors;
@@ -43,5 +39,9 @@ public class DoctorService {
     public String deleteByFirstName(String firstName) {
         doctorRepository.deleteByFirstName(firstName);
         return "delete succeded";
+    }
+
+    public String getFirstName() {
+        return "Riad";
     }
 }

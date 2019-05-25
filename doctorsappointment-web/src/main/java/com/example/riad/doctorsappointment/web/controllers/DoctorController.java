@@ -59,4 +59,10 @@ public class DoctorController {
         doctorService.deleteByFirstName(firstName);
         return "is deleted!!!";
     }
+
+    @RequestMapping("/get-full-name")
+    @ResponseBody
+    public String getFirstName() {
+        return doctorService.getFirstName();
+    }
 }
