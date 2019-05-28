@@ -9,11 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.print.attribute.URISyntax;
 import javax.transaction.Transactional;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @Controller
@@ -68,10 +72,17 @@ public class DoctorController {
         return doctorService.getFirstName();
     }
 
-    @RequestMapping("/get-full-name")
+    @RequestMapping("/get-short-desc")
     @ResponseBody
-    public ResponseEntity<List<DoctorShortDescription>> getFullName() {
-        List<DoctorShortDescription> doctorShortDescriptions = doctorService.getFullName();
+    public ResponseEntity<List<DoctorShortDescription>> getShortDesc() {
+        List<DoctorShortDescription> doctorShortDescriptions = doctorService.getShortDesc();
         return new ResponseEntity<List<DoctorShortDescription>>(doctorShortDescriptions, HttpStatus.OK);
+    }
+
+    @RequestMapping("/add-doctor")
+    @ResponseBody
+    public ResponseEntity<String> addDoctor(@RequestBody Doctor doctor) throws URISyntaxException {
+        doctorService.addDoctor(doctor);
+        return new ResponseEntity<String>("doctor add successfully", HttpStatus.OK);
     }
 }
