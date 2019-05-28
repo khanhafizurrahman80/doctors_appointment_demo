@@ -12,6 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DoctorShortDescription {
+    private Long docId;
     private String fullName;
     private String category;
 }

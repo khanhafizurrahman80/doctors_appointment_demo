@@ -46,11 +46,11 @@ public class DoctorService {
         return "Riad";
     }
 
-    public List<DoctorShortDescription> getFullName() {
+    public List<DoctorShortDescription> getShortDesc() {
         List<Doctor> doctorList = getAllDoctors();
         List<DoctorShortDescription> doctorShortDescriptions = new ArrayList<>();
         doctorList.forEach(doctor -> {
-           doctorShortDescriptions.add(new DoctorShortDescription(doctor.getFirstName() + " " +doctor.getLastName(), doctor.getCategory()));
+           doctorShortDescriptions.add(new DoctorShortDescription(doctor.getId(),doctor.getFirstName() + " " +doctor.getLastName(), doctor.getCategory()));
         });
         return doctorShortDescriptions;
     }
