@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -55,5 +56,8 @@ public class DoctorService {
         return doctorShortDescriptions;
     }
 
-
+    public Optional<Doctor> getIndividualDesc(Long id) {
+        Optional<Doctor> individualDoc = doctorRepository.findById(id);
+        return individualDoc;
+    }
 }

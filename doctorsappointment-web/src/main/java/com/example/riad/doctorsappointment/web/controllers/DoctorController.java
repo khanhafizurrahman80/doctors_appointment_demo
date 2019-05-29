@@ -19,6 +19,7 @@ import javax.print.attribute.URISyntax;
 import javax.transaction.Transactional;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/doctor")
@@ -79,10 +80,19 @@ public class DoctorController {
         return new ResponseEntity<List<DoctorShortDescription>>(doctorShortDescriptions, HttpStatus.OK);
     }
 
+    @RequestMapping("/get-individual-desc/{id}")
+    @ResponseBody
+    public Optional<Doctor> getIndividualDesc(@PathVariable Long id) {
+        Optional<Doctor> doctorIndividualDescription = doctorService.getIndividualDesc(id);
+        return doctorIndividualDescription;
+    }
+
     @RequestMapping("/add-doctor")
     @ResponseBody
     public ResponseEntity<String> addDoctor(@RequestBody Doctor doctor) throws URISyntaxException {
         doctorService.addDoctor(doctor);
         return new ResponseEntity<String>("doctor add successfully", HttpStatus.OK);
     }
+
+
 }
