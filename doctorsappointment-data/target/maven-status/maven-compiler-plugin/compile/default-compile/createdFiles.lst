@@ -2,6 +2,10 @@ com/example/riad/doctorsappointment/data/repos/DoctorRepository.class
 com/example/riad/doctorsappointment/data/repos/DoctorDetailsRepository.class
 com/example/riad/doctorsappointment/data/domains/DoctorDetails.class
 com/example/riad/doctorsappointment/data/domains/Doctor.class
+com/example/riad/doctorsappointment/data/domains/DoctorShortDescription.class
 com/example/riad/doctorsappointment/data/services/DoctorDetailsService.class
+com/example/riad/doctorsappointment/data/services/AppointmentService.class
+com/example/riad/doctorsappointment/data/repos/AppointmentRepository.class
 com/example/riad/doctorsappointment/data/DataSourceConfig.class
 com/example/riad/doctorsappointment/data/services/DoctorService.class
+com/example/riad/doctorsappointment/data/domains/AppointmentBook.class

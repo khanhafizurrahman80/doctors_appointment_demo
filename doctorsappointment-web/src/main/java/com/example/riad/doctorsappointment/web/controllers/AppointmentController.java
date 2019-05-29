@@ -25,6 +25,7 @@ public class AppointmentController {
     }
 
     @RequestMapping("/get-all-appointments")
+    @ResponseBody
     private List<AppointmentBook> getAllAppointments () {
         return this.appointmentService.getAllAppointments();
     }

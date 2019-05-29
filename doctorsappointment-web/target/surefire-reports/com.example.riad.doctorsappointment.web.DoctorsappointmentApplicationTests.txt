@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.683 s - in com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.655 s - in com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests

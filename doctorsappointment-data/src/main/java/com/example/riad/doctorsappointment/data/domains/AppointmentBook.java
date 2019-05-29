@@ -25,5 +25,5 @@ public class AppointmentBook {
     private String appointmentTakenTo;
     private String appointmentAddress;
     private String appointmentTime;
-    private boolean apprioved;
+    private boolean approved;
 }
