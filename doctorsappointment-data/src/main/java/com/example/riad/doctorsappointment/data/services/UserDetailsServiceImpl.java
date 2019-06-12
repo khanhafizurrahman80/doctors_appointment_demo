@@ -1,73 +1,51 @@
 package com.example.riad.doctorsappointment.data.services;
 
+import com.example.riad.doctorsappointment.data.domains.CustomUserDetails;
 import com.example.riad.doctorsappointment.data.domains.User;
 import com.example.riad.doctorsappointment.data.repos.UserRepository;
+import com.example.riad.doctorsappointment.data.services.Interfaces.CustomUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+import java.util.Optional;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService, CustomUserService {
 
     private UserRepository userRepo;
-    public List<User> userList;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public UserDetailsServiceImpl(UserRepository userRepo) {
+    public UserDetailsServiceImpl(UserRepository userRepo, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userRepo = userRepo;
-    }
-
-    public User getByUsername(String username) {
-        return this.userRepo.findByUsername(username);
-    }
-
-
-    public void addUser (User user){
-        userRepo.save(user);
-    }
-
-    public List<User> getAllUsers(){
-        if (userRepo.findAll() == null){
-        }else{
-            userRepo.findAll().forEach(userList:: add);
-        }
-        return userList;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("In userdetails method");
-        User user = userRepo.findByUsername(username);
-        System.out.println(user.getUsername());
-        System.out.println(user.getPassword());
-        if (user == null){
-            System.out.println("inside null");
-            throw new UsernameNotFoundException(username);
-        }
+        Optional<User> optionalUser = userRepo.findByUsername(username);
 
-//        Set<GrantedAuthority> grantedAuthorities = setGrantedAuthorities(user);
-        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        System.out.println(user.getRoles());
-        user.getRoles().forEach((role)->{
-            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
-        });
-
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
+        optionalUser
+                .orElseThrow(() -> new UsernameNotFoundException("Username not found!"));
+        return optionalUser.map(CustomUserDetails::new).get();
     }
 
-//    private Set<GrantedAuthority> setGrantedAuthorities(User user){
-//        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-//        user.getRoles().forEach((role)->{
-//            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
-//        });
-//        return grantedAuthorities;
-//    }
+    @Override
+    public void save(User user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        userRepo.save(user);
+    }
+
+    @Override
+    public List<User> findAllUsers() {
+        List<User> users = new ArrayList<>();
+        userRepo.findAll().forEach(users:: add);
+        return users;
+    }
 }

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,7 +21,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -36,6 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
     }
 
+
     @Qualifier("userDetailsServiceImpl")
     @Autowired
     private UserDetailsService userDetailsService;
@@ -46,14 +46,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable();
 
         http
-            .authorizeRequests()
-            .antMatchers("/","/index","/users/get-allUser")
-            .permitAll()
-            .antMatchers(HttpMethod.POST, "/users/add-user")
-            .permitAll()
-            .anyRequest().fullyAuthenticated()
-            .and()
-            .formLogin();
+                .authorizeRequests()
+                .antMatchers("/doctor/**").authenticated()
+                .anyRequest().permitAll()
+                .and().formLogin().permitAll();
     }
 
     @Override
@@ -67,41 +63,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             return new org.springframework.security.core.userdetails.User(username, user.getPassword(), AuthorityUtils.createAuthorityList("USER"));
         });
     }
-
-
-    // ------
-
-//    @Autowired
-//    private CustomUserService userService;
-//
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http
-//            .authorizeRequests()
-//            .antMatchers("/appointment-controller", "/doctor")
-//            .authenticated()
-//            .anyRequest().permitAll()
-//            ;
-//    }
-//
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth
-//            .userDetailsService(username -> {
-//                User user = userService.getByUsername(username);
-//                if (user == null){
-//                    throw new UsernameNotFoundException("user with name '" + username + "'not found!");
-//                }
-//                return new org.springframework.security.core.userdetails.User(username, user.getPassword(), AuthorityUtils.createAuthorityList("USER"));
-//            })
-//            .passwordEncoder(encoder());
-//    }
-//
-//    @Bean
-//    public PasswordEncoder encoder(){
-//       return new StandardPasswordEncoder("53cr3t");
-//    }
-
 }
 
 
