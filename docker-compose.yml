@@ -1,31 +1,32 @@
+
 version: '3'
 
 services:
 
-  docker-mysql:
-    container_name: doctorapp-mysql
+  docker-doctorappointment-mysql:
+    container_name: doctorappointment-mysql
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=12345678
+      - MYSQL_ROOT_PASSWORD=12345671
     networks:
-      - my_doc_mysql_net
+      - doctorappointment_mysql_net
     ports:
       - 3306:3306
   #
-  springboot-docker-compose-appointment-container:
-    image: springboot-docker-compose-doctorsappointment-app:1
+  springboot-docker-compose-doctorappointment-container:
+    image: springboot-docker-compose-doctorappointment-app:1
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
       - 8080:8080
     depends_on:
-      - docker-mysql
+      - docker-doctorappointment-mysql
     links:
-      - docker-mysql:mysql
+      - docker-doctorappointment-mysql:mysql
     networks:
-      - my_doc_mysql_net
+      - doctorappointment_mysql_net
 
 networks:
-  my_doc_mysql_net:
+  doctorappointment_mysql_net:
     driver: bridge

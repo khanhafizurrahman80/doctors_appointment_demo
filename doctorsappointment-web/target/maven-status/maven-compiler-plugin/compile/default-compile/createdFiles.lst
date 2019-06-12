@@ -1,5 +1,4 @@
 com/example/riad/doctorsappointment/web/config/SecurityConfig.class
-com/example/riad/doctorsappointment/web/controllers/RegistrationController.class
 com/example/riad/doctorsappointment/web/controllers/UserController.class
 com/example/riad/doctorsappointment/web/bootstrap/DoctorAppointmentBootstrap.class
 com/example/riad/doctorsappointment/web/controllers/AppointmentController.class
