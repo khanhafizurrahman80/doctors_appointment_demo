@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ffe90e6-4b75-42fe-936d-c4549e8ae833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/CustomUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/doctorsappointmentdata.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/doctorsappointmentdata.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/doctorsappointmentweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/doctorsappointmentweb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/docker-doctor-appointment.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/docker-doctor-appointment.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/TEST-com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/TEST-com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/target/surefire-reports/com.example.riad.doctorsappointment.web.DoctorsappointmentApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,12 +23,28 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state relative-caret-position="223">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,11 +119,12 @@
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/CustomUserService.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/UserController.java" />
-        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/ApplicationUser.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java" />
       </list>
     </option>
   </component>
@@ -405,17 +400,18 @@
       <workItem from="1558698346268" duration="9908000" />
       <workItem from="1558712450693" duration="5305000" />
       <workItem from="1558724660579" duration="7235000" />
-      <workItem from="1560280158620" duration="1652000" />
+      <workItem from="1560280158620" duration="3641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67135000" />
+    <option name="totallyTimeSpent" value="69124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3489499" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23909532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -425,7 +421,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30547947" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.369863" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5626943" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -736,26 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -815,10 +791,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="2">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
           </folding>
         </state>
       </provider>

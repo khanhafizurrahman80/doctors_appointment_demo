@@ -11,18 +11,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name = "role")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "role_id")
     private Long id;
 
-    private String name;
+    @Column(name = "role")
+    private String role;
 
-    // i am following a tutorial to make it functionable:
-    // https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/
 
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn
-    private User user;
 }
