@@ -2,20 +2,18 @@ package com.example.riad.doctorsappointment.web.controllers;
 
 import com.example.riad.doctorsappointment.data.domains.Doctor;
 import com.example.riad.doctorsappointment.data.domains.DoctorShortDescription;
-import com.example.riad.doctorsappointment.data.services.DoctorDetailsService;
-import com.example.riad.doctorsappointment.data.services.DoctorService;
+import com.example.riad.doctorsappointment.data.services.DoctorDetailsServiceImpl;
+import com.example.riad.doctorsappointment.data.services.DoctorServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.print.attribute.URISyntax;
 import javax.transaction.Transactional;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -26,16 +24,16 @@ import java.util.Optional;
 @Slf4j
 public class DoctorController {
 
-    private DoctorService doctorService;
-    private DoctorDetailsService doctorDetailsService;
+    private DoctorServiceImpl doctorService;
+    private DoctorDetailsServiceImpl doctorDetailsService;
 
     @Autowired
-    public DoctorController(DoctorService doctorService, DoctorDetailsService doctorDetailsService) {
+    public DoctorController(DoctorServiceImpl doctorService, DoctorDetailsServiceImpl doctorDetailsService) {
         this.doctorService = doctorService;
         this.doctorDetailsService = doctorDetailsService;
     }
 
-    public DoctorController(DoctorService doctorService) {
+    public DoctorController(DoctorServiceImpl doctorService) {
         this.doctorService = doctorService;
     }
 

@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ffe90e6-4b75-42fe-936d-c4549e8ae833" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/AppointmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/DoctorDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/DoctorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/repos/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/CustomUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/CustomUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/AppointmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/RegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/controllers/DoctorController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,10 +30,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java">
+        <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+            <state relative-caret-position="167">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -65,7 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/doctorsappointment-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/configs/DataSourceConfig.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doc_appointment/domains/Person.java" />
@@ -115,6 +115,8 @@
         <option value="$PROJECT_DIR$/doctorsappointment-web/src/main/java/com/example/riad/doctorsappointment/web/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/User.java" />
         <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/domains/Role.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -323,6 +325,10 @@
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.riad.doctorsappointment.data.services.Interfaces" />
+      <recent name="com.example.riad.doctorsappointment.data.services" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.riad.doctorsappointment" />
     </key>
@@ -409,12 +415,12 @@
       <workItem from="1558698346268" duration="9908000" />
       <workItem from="1558712450693" duration="5305000" />
       <workItem from="1558724660579" duration="7235000" />
-      <workItem from="1560280158620" duration="8495000" />
+      <workItem from="1560280158620" duration="9250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73978000" />
+    <option name="totallyTimeSpent" value="74733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -522,7 +528,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/AppointmentService.java">
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/AppointmentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
@@ -615,18 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -665,16 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -787,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/CustomUserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -838,6 +812,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/Interfaces/DoctorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/DoctorDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorsappointment-data/src/main/java/com/example/riad/doctorsappointment/data/services/CustomUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -16,13 +16,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService, CustomUserService {
+public class CustomUserServiceImpl implements UserDetailsService, CustomUserService {
 
     private UserRepository userRepo;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public UserDetailsServiceImpl(UserRepository userRepo, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public CustomUserServiceImpl(UserRepository userRepo, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userRepo = userRepo;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
