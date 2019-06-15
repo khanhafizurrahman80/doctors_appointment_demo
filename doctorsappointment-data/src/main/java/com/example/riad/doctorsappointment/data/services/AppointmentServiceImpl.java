@@ -2,6 +2,7 @@ package com.example.riad.doctorsappointment.data.services;
 
 import com.example.riad.doctorsappointment.data.domains.AppointmentBook;
 import com.example.riad.doctorsappointment.data.repos.AppointmentRepository;
+import com.example.riad.doctorsappointment.data.services.Interfaces.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AppointmentServiceImpl implements com.example.riad.doctorsappointment.data.services.Interfaces.AppointmentServiceImpl {
+public class AppointmentServiceImpl implements AppointmentService {
     private AppointmentRepository appointmentRepository;
 
     @Autowired

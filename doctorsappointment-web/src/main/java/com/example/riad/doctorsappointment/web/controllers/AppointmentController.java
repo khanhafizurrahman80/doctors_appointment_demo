@@ -2,6 +2,7 @@ package com.example.riad.doctorsappointment.web.controllers;
 
 import com.example.riad.doctorsappointment.data.domains.AppointmentBook;
 import com.example.riad.doctorsappointment.data.services.AppointmentServiceImpl;
+import com.example.riad.doctorsappointment.data.services.Interfaces.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import java.util.List;
 @RequestMapping("/appointment-controller")
 public class AppointmentController {
 
-    private AppointmentServiceImpl appointmentService;
+    private AppointmentService appointmentService;
 
     @Autowired
     public AppointmentController(AppointmentServiceImpl appointmentService) {
