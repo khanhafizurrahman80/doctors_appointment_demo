@@ -32,3 +32,12 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 
+##########################
+## IntelliJ
+##########################
+*.iml
+.idea/
+*.ipr
+*.iws
+out/
+.idea_modules/
