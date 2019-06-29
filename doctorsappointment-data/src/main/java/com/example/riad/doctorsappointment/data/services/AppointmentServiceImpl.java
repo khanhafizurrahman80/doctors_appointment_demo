@@ -26,7 +26,8 @@ public class AppointmentServiceImpl implements AppointmentService {
     }
 
     @Override
-    public void addAppointment(AppointmentBook appointmentBook) {
+    public AppointmentBook addAppointment(AppointmentBook appointmentBook) {
         this.appointmentRepository.save(appointmentBook);
+        return appointmentBook;
     }
 }
