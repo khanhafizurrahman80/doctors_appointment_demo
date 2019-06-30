@@ -3,8 +3,11 @@ package com.example.riad.doctorsappointment.web.controllers;
 import com.example.riad.doctorsappointment.data.domains.AppointmentBook;
 import com.example.riad.doctorsappointment.data.services.AppointmentServiceImpl;
 import com.example.riad.doctorsappointment.data.services.Interfaces.AppointmentService;
+import com.example.riad.doctorsappointment.web.config.resources.AppointmentResource;
 import com.example.riad.doctorsappointment.web.errors.RecordNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -23,6 +26,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/appointments")
@@ -38,8 +42,12 @@ public class AppointmentController {
     @RequestMapping(path = "/", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    private List<AppointmentBook> getAllAppointments () {
-        return this.appointmentService.getAllAppointments();
+    private ResponseEntity <Resources<AppointmentResource>> getAllAppointments () {
+        final List<AppointmentResource> collection = this.appointmentService.getAllAppointments().stream().map(AppointmentResource::new).collect(Collectors.toList());
+        final Resources<AppointmentResource> resources = new Resources<>(collection);
+        final String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
+        resources.add(new Link(uriString, "self"));
+        return ResponseEntity.ok(resources);
     }
 
     @RequestMapping(path = "/appointment", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
