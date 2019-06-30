@@ -36,4 +36,18 @@ public class AppointmentServiceImpl implements AppointmentService {
     public Optional<AppointmentBook> findById(Long id) {
         return this.appointmentRepository.findById(id);
     }
+
+    @Override
+    public AppointmentBook updateAppointment(AppointmentBook appointmentBook, Long id) {
+        AppointmentBook savedAppointmentBook = this.appointmentRepository.findById(id).get();
+        savedAppointmentBook.setAppointmentAddress(appointmentBook.getAppointmentAddress());
+        savedAppointmentBook.setAppointmentTakenBy(appointmentBook.getAppointmentTakenBy());
+        savedAppointmentBook.setAppointmentTakenTo(appointmentBook.getAppointmentTakenTo());
+        savedAppointmentBook.setAppointmentTime(appointmentBook.getAppointmentTime());
+        savedAppointmentBook.setApproved(appointmentBook.isApproved());
+        this.appointmentRepository.save(savedAppointmentBook);
+        return savedAppointmentBook;
+    }
+
+
 }

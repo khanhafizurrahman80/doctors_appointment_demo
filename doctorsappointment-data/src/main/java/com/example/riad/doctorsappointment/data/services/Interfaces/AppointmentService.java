@@ -11,4 +11,6 @@ public interface AppointmentService {
     AppointmentBook addAppointment(AppointmentBook appointmentBook);
 
     Optional<AppointmentBook> findById(Long id);
+
+    AppointmentBook updateAppointment(AppointmentBook appointmentBook, Long id);
 }
