@@ -16,6 +16,8 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -31,43 +33,48 @@ public class AppointmentServiceImplTest {
 
     @Test
     public void getAllAppointments() {
+
+        //given
         AppointmentBook appointmentBook = new AppointmentBook();
         List<AppointmentBook> appointmentBooks = new ArrayList<>();
-
         appointmentBooks.add(appointmentBook);
+        given(appointmentRepository.findAll()).willReturn(appointmentBooks);
 
-        when(appointmentRepository.findAll()).thenReturn(appointmentBooks);
-
+        //when
         List<AppointmentBook> foundAppointmentBooks = appointmentService.getAllAppointments();
 
-        verify(appointmentRepository).findAll();
+        //then
+        then(appointmentRepository).should().findAll();
 
         assertThat(foundAppointmentBooks).hasSize(1);
     }
 
     @Test
     public void addAppointment() {
+        //given
         AppointmentBook appointmentBook = new AppointmentBook();
+        given(appointmentRepository.save(any(AppointmentBook.class))).willReturn(appointmentBook);
 
-        when(appointmentRepository.save(any(AppointmentBook.class))).thenReturn(appointmentBook);
-
+        //when
         AppointmentBook savedAppointmentBook = appointmentService.addAppointment(new AppointmentBook());
 
-        verify(appointmentRepository).save(any(AppointmentBook.class));
-
+        //then
+        then(appointmentRepository).should().save(any(AppointmentBook.class));
         assertThat(savedAppointmentBook).isNotNull();
     }
 
 
     @Test
     void findById() {
+        //given
         AppointmentBook appointmentBook = new AppointmentBook();
+        given(appointmentRepository.findById(anyLong())).willReturn(Optional.of(appointmentBook));
 
-        when(appointmentRepository.findById(anyLong())).thenReturn(Optional.of(appointmentBook));
-
+        //when
         AppointmentBook savedAppointmentBook = appointmentService.findById(1L).get();
 
-        verify(appointmentRepository).findById(anyLong());
+        //then
+        then(appointmentRepository).should().findById(anyLong());
 
         assertThat(savedAppointmentBook).isNotNull();
 
