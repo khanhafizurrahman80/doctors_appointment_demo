@@ -9,6 +9,8 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Slf4j
 @Component
 public class DoctorAppointmentBootstrap implements ApplicationListener<ContextRefreshedEvent> {
@@ -23,8 +25,8 @@ public class DoctorAppointmentBootstrap implements ApplicationListener<ContextRe
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        Doctor ind_doctor = doctorRepository.findByFirstName("Mashiur");
-        if (ind_doctor == null) {
+        Optional<Doctor> ind_doctor = doctorRepository.findById(1L);
+        if (!ind_doctor.isPresent()) {
             doctorRepository.save(getDoctor());
         }
         log.debug("Loading Bootstrap data");

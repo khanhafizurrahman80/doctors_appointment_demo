@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,10 +26,18 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Size(min = 2, message = "First Name must have atleast 2 characters")
     private String firstName;
+
+    @NotNull
+    @Size(min = 2, message = "Last Name must have atleast 2 characters")
     private String lastName;
+    @Email(message = "Email address is not valid!")
     private String emailAddress;
+    @Pattern(regexp="(^$|[0-9]{10})")
     private String phoneNumber;
+    @Size(min = 2, message = "category must have atleast 2 characters")
     private String category;
 
     @JsonManagedReference

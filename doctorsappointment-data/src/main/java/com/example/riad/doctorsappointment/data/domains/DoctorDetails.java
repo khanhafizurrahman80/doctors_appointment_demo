@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @NoArgsConstructor
@@ -18,8 +20,16 @@ public class DoctorDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Size(min = 2, message = "day must have atleast 2 characters")
     private String day;
-    private String time;
+
+    @NotNull
+    @Size(min = 2, message = "appointment time must have atleast 2 characters")
+    private String appointmentTime;
+
+    @NotNull
+    @Size(min = 2, message = "contact address must have atleast 2 characters")
     private String contactAddress;
 
     @JsonBackReference
@@ -28,9 +38,9 @@ public class DoctorDetails {
     private Doctor doctor;
 
 
-    public DoctorDetails(String day, String time, String contactAddress) {
+    public DoctorDetails(String day, String appointmentTime, String contactAddress) {
         this.day = day;
-        this.time = time;
+        this.appointmentTime = appointmentTime;
         this.contactAddress = contactAddress;
     }
 

@@ -1,34 +1,36 @@
 package com.example.riad.doctorsappointment.web.controllers;
 
 import com.example.riad.doctorsappointment.data.domains.Doctor;
-import com.example.riad.doctorsappointment.data.domains.DoctorShortDescription;
 import com.example.riad.doctorsappointment.data.services.DoctorDetailsServiceImpl;
 import com.example.riad.doctorsappointment.data.services.DoctorServiceImpl;
+import com.example.riad.doctorsappointment.data.services.Interfaces.DoctorService;
+import com.example.riad.doctorsappointment.web.errors.RecordNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.transaction.Transactional;
+import javax.validation.Valid;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.Optional;
 
 @Controller
-@RequestMapping("/doctor")
+@RequestMapping("/doctors")
 @Slf4j
 public class DoctorController {
 
-    private DoctorServiceImpl doctorService;
+    private DoctorService doctorService;
     private DoctorDetailsServiceImpl doctorDetailsService;
 
     @Autowired
-    public DoctorController(DoctorServiceImpl doctorService, DoctorDetailsServiceImpl doctorDetailsService) {
+    public DoctorController(DoctorService doctorService, DoctorDetailsServiceImpl doctorDetailsService) {
         this.doctorService = doctorService;
         this.doctorDetailsService = doctorDetailsService;
     }
@@ -37,60 +39,48 @@ public class DoctorController {
         this.doctorService = doctorService;
     }
 
-    @RequestMapping("/get-all")
+    @RequestMapping(path = "/", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<Doctor> getAllDoctors(){
-        int count = doctorService.getAllDoctors().size();
-        log.debug("get all doctors " + count);
         return doctorService.getAllDoctors();
     }
 
-    @RequestMapping("/total-doctors")
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE,
+                    produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public long countAllDoctors() {
-        return doctorService.countDoctors();
+    public void deleteDoctor(@PathVariable Long id){
+        Doctor doctor = doctorService.deleteById(id);
+        if (doctor == null)
+            throw new RecordNotFoundException("Record is not found for id: " + id);
+    }
+    @RequestMapping(path = "/doctor", method = RequestMethod.POST,
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @ResponseBody
+    public ResponseEntity<Object> addDoctor(@Valid @RequestBody Doctor doctor) throws URISyntaxException {
+        Doctor savedDoctor = doctorService.addDoctor(doctor);
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(savedDoctor.getId()).toUri();
+        return ResponseEntity.created(location).build();
     }
 
-    @RequestMapping("/total-doctors-details")
+    @RequestMapping(path = "{id}", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public long countAllDoctorsDetails() {
-        return doctorDetailsService.countDoctorDetails();
+    public Resource<Doctor> getDoctor(@PathVariable Long id){
+        Doctor savedDoctor = doctorService.getDoctor(id);
+
+        if (savedDoctor == null)
+            throw new RecordNotFoundException("Record is not found for id: " + id);
+
+        Resource<Doctor> resources = new Resource<Doctor>(savedDoctor);
+        final Link linkTo = ControllerLinkBuilder.linkTo
+                (ControllerLinkBuilder.methodOn(this.getClass()).getAllDoctors()).withRel("all-Doctors");
+        resources.add(linkTo);
+
+        return resources;
     }
-
-    @RequestMapping("/delete-by-id/{firstName}")
-    @ResponseBody
-    @Transactional
-    public String deleteByFirstName(@PathVariable String firstName){
-        doctorService.deleteByFirstName(firstName);
-        return "is deleted!!!";
-    }
-
-    @RequestMapping("/get-first-name")
-    @ResponseBody
-    public String getFirstName() {
-        return doctorService.getFirstName();
-    }
-
-    @RequestMapping("/get-short-desc")
-    @ResponseBody
-    public ResponseEntity<List<DoctorShortDescription>> getShortDesc() {
-        List<DoctorShortDescription> doctorShortDescriptions = doctorService.getShortDesc();
-        return new ResponseEntity<List<DoctorShortDescription>>(doctorShortDescriptions, HttpStatus.OK);
-    }
-
-    @RequestMapping("/get-individual-desc/{id}")
-    @ResponseBody
-    public Optional<Doctor> getIndividualDesc(@PathVariable Long id) {
-        Optional<Doctor> doctorIndividualDescription = doctorService.getIndividualDesc(id);
-        return doctorIndividualDescription;
-    }
-
-    @RequestMapping("/add-doctor")
-    @ResponseBody
-    public ResponseEntity<String> addDoctor(@RequestBody Doctor doctor) throws URISyntaxException {
-        doctorService.addDoctor(doctor);
-        return new ResponseEntity<String>("doctor add successfully", HttpStatus.OK);
-    }
-
-
 }

@@ -33,8 +33,9 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public void addDoctor(Doctor doctor){
+    public Doctor addDoctor(Doctor doctor){
         doctorRepository.save(doctor);
+        return doctor;
     }
 
     @Override
@@ -67,5 +68,19 @@ public class DoctorServiceImpl implements DoctorService {
     public Optional<Doctor> getIndividualDesc(Long id) {
         Optional<Doctor> individualDoc = doctorRepository.findById(id);
         return individualDoc;
+    }
+
+    @Override
+    public Doctor getDoctor(Long id) {
+        Optional<Doctor> mayBsavedDoctor = doctorRepository.findById(id);
+        Doctor savedDoctor = mayBsavedDoctor.isPresent() ? mayBsavedDoctor.get() : null;
+        return savedDoctor;
+    }
+
+    @Override
+    public Doctor deleteById(Long id) {
+        Doctor savedDoctor = getDoctor(id);
+        doctorRepository.deleteById(id);
+        return savedDoctor;
     }
 }

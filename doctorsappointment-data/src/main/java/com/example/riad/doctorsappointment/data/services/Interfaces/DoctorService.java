@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface DoctorService {
     List<Doctor> getAllDoctors();
 
-    void addDoctor(Doctor doctor);
+    Doctor addDoctor(Doctor doctor);
 
     long countDoctors();
 
@@ -20,4 +20,8 @@ public interface DoctorService {
     List<DoctorShortDescription> getShortDesc();
 
     Optional<Doctor> getIndividualDesc(Long id);
+
+    Doctor getDoctor(Long id);
+
+    Doctor deleteById(Long id);
 }
